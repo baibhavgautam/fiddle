@@ -1,0 +1,26 @@
+
+#comment-list {
+  padding: 0;
+  margin: 0;
+  height: 55vh;
+  overflow-y: scroll;
+}
+.comment {
+  padding: 15px;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.author-email {
+  font-weight: bold;
+}
+
+.comment-box {
+  padding-right: 10px;
+  padding-top: 35px;
+  margin-bottom: 30px;
+}
+/* HIDES THE SCROLLBAR*/
+::-webkit-scrollbar {
+    display: none;
+}
