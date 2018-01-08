@@ -11,12 +11,17 @@ class PagesController < ApplicationController
   end
 
   def new
-    render :show
+    render :new
   end
 
   def create
     new_page = Page.new(page_params)
-      redirect_to :action => 'show' if new_page.save
+      redirect_to pages_url if new_page.save
+
+    # respond_to do |format|
+    #   msg = { :message => comment.save ? "Success" : "Fail" }
+    #   format.json  { render :json => msg }
+    # end
   end
 
   private

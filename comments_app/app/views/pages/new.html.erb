@@ -1,7 +1,15 @@
 <h1>Create Page</h1>
 
 <form action="/pages" method="post">
-  <input type="text" name="page[title]">
-  <input type="text" name="page[body]">
+  <label>Title:
+    <input type="text" name="page[title]">
+  </label>
+  <br>
+  <br>
+  <label>Body:
+    <textarea type="text" name="page[body]"></textarea>
+  </label>
+  <br>
+  <br>
   <button type="submit" name="button">Submit</button>
 </form>
