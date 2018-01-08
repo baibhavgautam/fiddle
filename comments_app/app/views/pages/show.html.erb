@@ -26,10 +26,7 @@
       padding-top: 35px;
       margin-bottom: 30px;
     }
-    /* HIDES THE SCROLLBAR*/
-    ::-webkit-scrollbar {
-        display: none;
-    }
+
 
     .child-comment-list {
       list-style-type: none;
@@ -103,7 +100,7 @@
                     Cancel
                   </button>
                 </form>
-              </form>
+              <!-- </form> -->
               <ul class="child-comment-list">
                 <% comment.child_comments.each do |child_comment| %>
                   <li class="child-comment">
@@ -144,7 +141,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
   <script>
-
     // ONCE PAGE LOADS ADD LISTENER TO ALL REPLY LINKS TO TOGGLE SUBMIT FORM
     $('.reply').each(function (index) {
       // const parent_comment_id = $(this).attr('data-comment_id')
@@ -159,9 +155,21 @@
        $(this).parent().hide()
     })
 
-    // SUBMIT COMMENT FOR PAGE
+    // ALLOW USER TO SUBMIT A REPLY
+    $('.reply-submit-btn').click(function(e) {
+      const commentData = {
+        comment: {
+          author_email: $(this).attr('data-author'),
+          body: $(this).parent().find('textarea').val(),
+          comment_id: $(this).attr('data-comment_id')
+        }
+      }
+      $.post("/comments", commentData);
+    })
+
+    // ALLOW USER TO SUBMIT A COMMENT
     $('#submit-form').click(function () {
-       commentData = {
+       const commentData = {
          comment: {
            author_email: $('#submit-form').attr('data-author'),
            body: $('#comment-input').val(),
