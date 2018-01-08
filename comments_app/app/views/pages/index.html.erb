@@ -1,0 +1,10 @@
+<h1>Pages</h1>
+
+<a href="/pages/new"><h4>Create a new Page</h4></a>
+<ul>
+  <% @pages.each do |page| %>
+     <a href='/pages/<%=page.id%>'>
+       <li><%=page.title%></li>
+     </a>
+  <% end %>
+</ul>

@@ -1,0 +1,102 @@
+<h1>Page Details </h1>
+<h3>Title</h3>
+<%=@page.title%>
+<h3>Body</h3>
+<%=@page.body%>
+<br>
+<ul>
+  <% @comments.each do |comment| %>
+    <li>
+     <div class="comment">
+       <div class="author_email">
+         <%= comment.author_email %>
+       </div>
+       <div class="comment-body">
+         <%= comment.body %>
+       </div>
+       <a
+       class="reply"
+       data-comment_id=<%=@comment.id%>
+       >Reply</a>
+       </form>
+         <ul class="child-comment-list">
+           <% @comment.child_comments.each do |child_comment| do %>
+             <li class="child-comment">
+               <div class="reply-author_email">
+                 <%= child_comment.author_email %>
+               </div>
+               <div class="reply-body">
+                 <%= child_comment.body %>
+               </div>
+             </li>
+           end
+         </ul>
+     </div>
+    </li>
+  <% end %>
+</ul>
+<form>
+  <label>Comment
+    <input type="textarea" id="comment-body">
+  </label>
+  <button
+   type="button"
+   id="submit-form"
+  data-author=<%='USERNAME'%>
+  data-page_id=<%=@page.id%>
+   >Submit</button>
+</form>
+<a href="/pages">Go Back</a>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous">
+</script>
+
+<script>
+  // t.string "author_email"
+  // t.string "body"
+  // t.integer "page_id"
+  // t.integer "comment_id"
+
+  // ONCE THE PAGE LOADS,
+  // ADD A LISTENER TO ALL THE REPLY LINKS
+
+
+  // SELECT ALL REPLY LINKS
+  $('.reply').each(function(index) {
+    const parent_comment_id = $(this).attr('data-comment_id')
+    $(this).click(function() {
+    const commentBody = {
+      author_email: $(this).attr('data-reply-author_email'),
+      body:
+    }
+      // post a new request to /comments
+      $.post( "/comments", commentBody,  function( data ) {
+        // $( ".result" ).html( data );
+        console.log(`Got a reponse from post request--> `)
+        console.log(data)
+      });
+
+    })
+
+  })
+
+
+  $('#submit-form').click(function() {
+    const commentBody = $('#comment-body').val()
+    const author = $('#submit-form').attr('data-author')
+    const page_id = $('#submit-form').attr('data-page_id')
+
+    // MAKE A POST REQUEST TO /COMMENTS, IF SUCCESSFUL,
+    // PREPEND COMMENT TO COMMENT LIST
+    //   ATTACH A LISTENER FOR THE NEW COMMENT'S REPLY
+
+
+    // console.log(`comment body: ${commentBody} \nauthor${author}\npage_id${page_id}`)
+    // alert(`comment body: ${commentBody} \nauthor${author}\npage_id${page_id}`)
+
+  })
+</script>
