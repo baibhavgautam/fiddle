@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="master.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse custom-nav">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><span id="main-title">Show Title Here - Admin Panel</span></a>
+        </div>
+        <button id="comment-toggle-btn" class="btn btn-default btn-xs pull-right"><img id="comment-icon" src="icon_comment_white.png"></button><span id="num-of-msgs"class="badge pull-right">0</span>
+      </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div id="page-content" class="col-sm-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae laboriosam facere impedit amet reprehenderit eaque, consequuntur fuga, et adipisci, pariatur perferendis explicabo inventore non, officiis quos. Eveniet molestias, nulla ratione expedita. Minima cumque, iusto autem earum explicabo laudantium veritatis dignissimos, consequuntur id similique, totam ipsum hic, nesciunt velit reiciendis voluptatum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae laboriosam facere impedit amet reprehenderit eaque, consequuntur fuga, et adipisci, pariatur perferendis explicabo inventore non, officiis quos. Eveniet molestias, nulla ratione expedita. Minima cumque, iusto autem earum explicabo laudantium veritatis dignissimos, consequuntur id similique, totam ipsum hic, nesciunt velit reiciendis voluptatum.</p>
+        <img class="img-responsive" src="https://www.cookiesandclogs.com/wp-content/uploads/2013/03/mirror2012_08.jpg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae laboriosam facere impedit amet reprehenderit eaque, consequuntur fuga, et adipisci, pariatur perferendis explicabo inventore non, officiis quos. Eveniet molestias, nulla ratione expedita. Minima cumque, iusto autem earum explicabo laudantium veritatis dignissimos, consequuntur id similique, totam ipsum hic, nesciunt velit reiciendis voluptatum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae laboriosam facere impedit amet reprehenderit eaque, consequuntur fuga, et adipisci, pariatur perferendis explicabo inventore non, officiis quos. Eveniet molestias, nulla ratione expedita. Minima cumque, iusto autem earum explicabo laudantium veritatis dignissimos, consequuntur id similique, totam ipsum hic, nesciunt velit reiciendis voluptatum.</p>
+      </div>
+    </div>
+  </div>
+  <!--RENDER THIS PARTIAL  -->
+  <div id="comment-sidebar">
+    <!-- ADD A FORM  -->
+    <div id="comment-form-box">
+      <form id="comment-form">
+        <div class="form-group">
+          <textarea id="comment-input" class="form-control" placeholder="Add Comment"></textarea>
+        </div>
+        <button id="post-comment-btn" class="btn btn-default">Post Comment</button>
+      </form>
+    </div>
+    <hr class="full-width-hr"/>
+
+    <!-- DISPLAY ALL THE COMMENTS AND SUB COMMENTS -->
+
+    <ul id="comment-list">
+      <li class="comment">
+        <div class="author-email">
+          Kim Mathie
+          <span class="posted-datetime"> 1 day ago</span>
+        </div>
+        <div class="comment-body">
+          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+        </div>
+        <a class="reply-link">Reply</a>
+        <form class="reply-form">
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Add Reply"></textarea>
+          </div>
+          <button class="btn btn-default btn-xs reply-submit-btn">Submit</button>
+          <button class="btn btn-default btn-xs reply-cancel-btn">Cancel</button>
+        </form>
+        <ul class="child-comment-list">
+          <li class="child-comment">
+            <div class="reply-author_email">Linda Archer
+              <span class="posted-datetime"> 1 day ago</span>
+            </div>
+            <div class="reply-body">Ut enim ad minima veniam, quis nostrum exercutationem ullam corporis suscipit laboriosam, nisi</div>
+          </li>
+
+          <li class="child-comment">
+            <div class="reply-author_email">Linda Archer
+              <span class="posted-datetime"> 1 day ago</span>
+            </div>
+            <div class="reply-body">Ut enim ad minima veniam, quis nostrum exercutationem ullam corporis suscipit laboriosam, nisi</div>
+          </li>
+
+          <li class="child-comment">
+            <div class="reply-author_email">Linda Archer
+              <span class="posted-datetime"> 1 day ago</span>
+            </div>
+            <div class="reply-body">Ut enim ad minima veniam, quis nostrum exercutationem ullam corporis suscipit laboriosam, nisi</div>
+          </li>
+        </ul>
+       </li>
+
+
+
+       <li class="comment">
+         <div class="author-email">
+           Kim Mathie
+           <span class="posted-datetime"> 1 day ago</span>
+         </div>
+         <div class="comment-body">
+           Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+         </div>
+         <a class="reply-link">Reply</a>
+         <form class="reply-form">
+           <div class="form-group">
+             <textarea class="form-control" placeholder="Add Reply"></textarea>
+           </div>
+           <button class="btn btn-default btn-xs reply-submit-btn">Submit</button>
+           <button class="btn btn-default btn-xs reply-cancel-btn">Cancel</button>
+         </form>
+        </li>
+
+
+
+
+
+        <!-- temp -->
+        <li class="comment">
+          <div class="author-email">
+            Kim Mathie
+            <span class="posted-datetime"> 1 day ago</span>
+          </div>
+          <div class="comment-body">
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+          </div>
+          <a class="reply-link">Reply</a>
+          <form class="reply-form">
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Add Reply"></textarea>
+            </div>
+            <button class="btn btn-default btn-xs reply-submit-btn">Submit</button>
+            <button class="btn btn-default btn-xs reply-cancel-btn">Cancel</button>
+          </form>
+         </li>
+
+         <li class="comment">
+           <div class="author-email">
+             Kim Mathie
+             <span class="posted-datetime"> 1 day ago</span>
+           </div>
+           <div class="comment-body">
+             Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+           </div>
+           <a class="reply-link">Reply</a>
+           <form class="reply-form">
+             <div class="form-group">
+               <textarea class="form-control" placeholder="Add Reply"></textarea>
+             </div>
+             <button class="btn btn-default btn-xs reply-submit-btn">Submit</button>
+             <button class="btn btn-default btn-xs reply-cancel-btn">Cancel</button>
+           </form>
+          </li>
+
+          <li class="comment">
+            <div class="author-email">
+              Kim Mathie
+              <span class="posted-datetime"> 1 day ago</span>
+            </div>
+            <div class="comment-body">
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+            </div>
+            <a class="reply-link">Reply</a>
+            <form class="reply-form">
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Add Reply"></textarea>
+              </div>
+              <button class="btn btn-default btn-xs reply-submit-btn">Submit</button>
+              <button class="btn btn-default btn-xs reply-cancel-btn">Cancel</button>
+            </form>
+           </li>
+
+           <li class="comment">
+             <div class="author-email">
+               Kim Mathie
+               <span class="posted-datetime"> 1 day ago</span>
+             </div>
+             <div class="comment-body">
+               Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+             </div>
+             <a class="reply-link">Reply</a>
+             <form class="reply-form">
+               <div class="form-group">
+                 <textarea class="form-control" placeholder="Add Reply"></textarea>
+               </div>
+               <button class="btn btn-default btn-xs reply-submit-btn">Submit</button>
+               <button class="btn btn-default btn-xs reply-cancel-btn">Cancel</button>
+             </form>
+            </li>
+
+            <li class="comment">
+              <div class="author-email">
+                Kim Mathie
+                <span class="posted-datetime"> 1 day ago</span>
+              </div>
+              <div class="comment-body">
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+              </div>
+              <a class="reply-link">Reply</a>
+              <form class="reply-form">
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Add Reply"></textarea>
+                </div>
+                <button class="btn btn-default btn-xs reply-submit-btn">Submit</button>
+                <button class="btn btn-default btn-xs reply-cancel-btn">Cancel</button>
+              </form>
+             </li>
+    </ul>
+
+  </div>
+
+
+  <!-- ADD BOOTSTRAP -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- ADD jQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+  <!-- LOCAL JS -->
+  <script src="script.js"></script>
+</body>
+</html>

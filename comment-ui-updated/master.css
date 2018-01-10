@@ -1,0 +1,132 @@
+.custom-nav {
+  height: 60px;
+  background: #567434;
+  border-radius: 0;
+}
+
+#main-title {
+  color: #A5BB29;
+}
+
+#comment-toggle-btn {
+  margin-top: 10px;
+}
+
+#page-content {
+  /* float: left; */
+  /* border: 1px solid red; */
+}
+
+.red-border {
+  border: 1px solid red;
+}
+.yellow-border {
+  border: 1px solid yellow;
+}
+
+.container {
+  /* float: left; */
+  /* margin-right: 0; */
+}
+
+#comment-sidebar {
+  position: absolute;
+  top: 80px;
+  left: 75%;
+  display: none;
+  border-left: 1px solid #b2b2b2;
+  height: 100%;
+  overflow-y: scroll;
+  width: 25%;
+}
+/* HIDE THE SCROLLBAR FOR COMMENTS */
+#comment-sidebar::-webkit-scrollbar {
+    display: none;
+}
+#comment-input {
+  height: 150px;
+  width: 85%;
+}
+
+#post-comment-btn {
+  border-radius: 50vh;
+  background: #f37020;
+  color: #eff;
+}
+
+#comment-form-box {
+  width: 100%;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+#comment-toggle-btn {
+  background: #f37020;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+}
+
+.full-width-hr {
+  width: 100%;
+  color: #b2b2b2;
+  height: 1px;
+  background: #b2b2b2;
+  margin-top: 0;
+}
+
+.flip {
+   transform: rotate(-90deg);
+ }
+
+ #num-of-msgs {
+   margin-top: 1em;
+ }
+
+ .posted-datetime {
+   color: #b2b2b2;
+ }
+
+
+  .author-email, .reply-author_email {
+    font-weight: bold;
+  }
+
+  #comment-list, .child-comment-list {
+    list-style-type: none;
+    padding: 0;
+    padding: 25px;
+  }
+
+  .child-comment-list {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #comment-icon {
+    height: 80%;
+    width: 80%;
+  }
+
+  .comment-body {
+    width: 85%;
+  }
+
+  .reply-link {
+    color: #ff6262;
+  }
+
+  .reply-form {
+    display: none;
+  }
+
+  .comment {
+    padding-top: 20px;
+  }
+
+  .child-comment {
+    padding-top: 10px;
+  }
