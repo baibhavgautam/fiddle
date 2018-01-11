@@ -1,4 +1,6 @@
-
+body {
+  position: relative;
+}
 .custom-nav {
   height: 60px;
   background: #567434;
